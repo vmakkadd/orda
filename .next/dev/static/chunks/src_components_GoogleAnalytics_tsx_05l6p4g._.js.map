@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Project%20Backups/ORDA/Final/src/components/GoogleAnalytics.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport Script from \"next/script\";\r\n\r\nexport default function GoogleAnalytics() {\r\n  const gaId = process.env.NEXT_PUBLIC_GA_ID;\r\n\r\n  if (!gaId) return null;\r\n\r\n  return (\r\n    <>\r\n      <Script\r\n        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}\r\n        strategy=\"afterInteractive\"\r\n      />\r\n      <Script id=\"google-analytics\" strategy=\"afterInteractive\">\r\n        {`\r\n          window.dataLayer = window.dataLayer || [];\r\n          function gtag(){dataLayer.push(arguments);}\r\n          gtag('js', new Date());\r\n          gtag('config', '${gaId}');\r\n        `}\r\n      </Script>\r\n    </>\r\n  );\r\n}"],"names":["GoogleAnalytics","gaId","src","strategy","id"],"mappings":";;;;AAKe;;AAHf;AAFA;;;AAIe,SAASA;IACtB,MAAMC;IAEN;;IAEA,qBACE;;0BACE,6LAAC,4IAAM;gBACLC,KAAK,CAAC,4CAA4C,EAAED,MAAM;gBAC1DE,UAAS;;;;;;0BAEX,6LAAC,4IAAM;gBAACC,IAAG;gBAAmBD,UAAS;0BACpC,CAAC;;;;0BAIgB,EAAEF,KAAK;QACzB,CAAC;;;;;;;;AAIT;KArBwBD"}}]
+}
